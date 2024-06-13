@@ -7,7 +7,9 @@ dbConnection();
 const app=express();
 app.use(express.json());
 
-app.use("/api/users", require('./Routes/ContactRoutes'));
+app.use("/api/contacts", require('./Routes/ContactRoutes'));
+app.use('/api/users', require('./Routes/userRoutes'));
+
 
 app.use(errorHandler);
 
